@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #1e293b,
+    #0f172a
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Inputs */
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #d1d5db;
+}
+
+select {
+  color: white;
+}
+
+select option {
+  color: black;
+}
+
+/* Button */
+
+#add-btn {
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#add-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Summary Cards */
+
+.summary {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.card {
+  flex: 1;
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+  color: white;
+}
+
+.income {
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #059669
+  );
+}
+
+.expense {
+  background: linear-gradient(
+    135deg,
+    #ef4444,
+    #dc2626
+  );
+}
+
+.balance {
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Transactions */
+
+#transaction-list {
+  list-style: none;
+}
+
+#transaction-list li {
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+#transaction-list li:hover {
+  transform: scale(1.02);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.category {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+/* Delete Button */
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Mobile */
+
+@media(max-width:500px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .summary {
+    flex-direction: column;
+  }
+
+}
